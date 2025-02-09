@@ -1,9 +1,13 @@
 // eslint-disable-next-line react-refresh/only-export-components, no-unused-vars
+import './style.css';
+
 const MyComponent = () => {
     return (
-      <div>
-        <h2>Hello, Tai Doan!</h2>
-      </div>
+        //fragment <> </>
+    <> 
+      <div> Hello, Tai Doan!</div>
+      <div className="child" style={{borderRadius: '10px'}}>child</div>
+    </>
     )
   }
  
