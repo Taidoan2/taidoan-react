@@ -2,10 +2,12 @@
 import './style.css';
 
 const MyComponent = () => {
+    const ten = 'taidoan1111';
+    const so = 27;
     return (
         //fragment <> </>
     <> 
-      <div> Hello, Tai Doan!</div>
+      <div> Hello, {ten}, toi nam nay {so} tuoi</div>
       <div className="child" style={{borderRadius: '10px'}}>child</div>
     </>
     )
