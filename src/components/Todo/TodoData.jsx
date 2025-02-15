@@ -1,22 +1,27 @@
 
 const TodoData = (propsTypes) => {
-    const {todoList} = propsTypes;
-    console.log("check props", todoList);
+    const {todoList,deleteTodo} = propsTypes;
+    
+
+    const handleClickDelete = (id) => {
+      deleteTodo(id)
+    } 
+
+
+
     return (
     <div className='todo-data'>
       {todoList.map((item, index)=> {
         return (
-          <div className="todo-item">
+          <div className={`todo-item`} key = {item.id}>
             <div>{item.name}</div>
-            <button>DELETED</button>
+            <button onClick={() => handleClickDelete (item.id)} style={{cursor: 'pointer'}}>DELETED</button>
           </div>
         )
       })}
      
       
-      <div>
-        {JSON.stringify(propsTypes.todoList)}
-      </div>
+      
     </div>
     )
 }
