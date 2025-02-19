@@ -33,7 +33,7 @@ const App = () => {
   
   return (
   <div className="todo-container">
-  <div className="todo-title">Todo List</div>
+  <div className="todo-title">Todo Listttt</div>
     <TodoNew 
     addNewTodo = {addNewTodo}
     />
