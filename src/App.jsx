@@ -4,6 +4,7 @@ import TodoNew from './components/Todo/TodoNew';
 import reactLogo from './assets/react.svg';
 import { useState } from 'react';
 
+
 const App = () => {
 
   const [todoList, setTodoList] = useState([
@@ -33,7 +34,7 @@ const App = () => {
   
   return (
   <div className="todo-container">
-  <div className="todo-title">Todo Listttt</div>
+  <div className="todo-title">Todo List</div>
     <TodoNew 
     addNewTodo = {addNewTodo}
     />
