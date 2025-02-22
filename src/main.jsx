@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './styles/global.css'
+
+
 import {
 
   createBrowserRouter,
@@ -12,7 +14,9 @@ import {
 import LoginPage from './pages/login.jsx';
 import RegisterPage from './pages/register.jsx';
 import UsersPage from './pages/users.jsx';
-import ProductsPage from './pages/products.jsx';
+import BookPage from './pages/book.jsx';
+import TodoApp from './components/Todo/TodoApp.jsx';
+import ErrorPage from './pages/error.jsx';
 
 
 
@@ -21,14 +25,19 @@ import ProductsPage from './pages/products.jsx';
     {
       path: "/",
       element: <App />,
+      errorElement: <ErrorPage/>,
       children: [
+        {
+          index: true,
+          element: <TodoApp/>
+        },
         {
           path:"/users",
           element: <UsersPage/>
         },
         {
-          path:"/products",
-          element: <ProductsPage/>
+          path:"/books",
+          element: <BookPage/>
         },
       ]
     },
